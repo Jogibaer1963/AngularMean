@@ -1,0 +1,14 @@
+<mat-accordion multi="true">
+  @if (posts.length > 0) {
+    @for (post of posts; track post.title) {
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ post.title }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>{{ post.content }}</p>
+      </mat-expansion-panel>
+    }
+  }
+</mat-accordion>
