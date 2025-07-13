@@ -13,6 +13,7 @@ import { Header } from './header/header';
 import { PostList } from './post/post-list/post-list';
 
 
+
 @NgModule({
   declarations: [
     App,
@@ -30,7 +31,7 @@ import { PostList } from './post/post-list/post-list';
     MatExpansionModule,
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
   ],
   bootstrap: [App]
 })
