@@ -6,6 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { provideHttpClient } from '@angular/common/http';
 
 import { App } from './app';
 import { PostCreate } from './post/post-create/post-create';
@@ -32,6 +33,7 @@ import { PostList } from './post/post-list/post-list';
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
+    provideHttpClient()
   ],
   bootstrap: [App]
 })
