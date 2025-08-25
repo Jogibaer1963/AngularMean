@@ -12,14 +12,8 @@ import { OnDestroy } from '@angular/core';
 })
 
 export class PostList implements OnInit, OnDestroy {
- /* posts = [
-    {title: 'Jogibaer one', content: 'Test'},
-    {title: 'Jogibaer two', content: 'Test'},
-    {title: 'Jogibaer three', content: 'Test'}
-  ] */
  posts: Post[] = [];
  private postSub: Subscription;
-
  constructor(public postsService: PostsService) { }
 
  ngOnInit() {
@@ -28,6 +22,11 @@ export class PostList implements OnInit, OnDestroy {
      this.posts = posts;
    })
  }
+
+ onDelete(postId: string) {
+    this.postsService.onDelete(postId);
+ }
+
  ngOnDestroy() {
    this.postSub.unsubscribe();
  }
